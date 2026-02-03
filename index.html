@@ -33,32 +33,34 @@ const trimesterData = {
       id: 1,
       title: "1. Evolución de los Modelos Atómicos",
       duration: "45 min",
-      content: (
-        <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p className="text-lg">
+      // AHORA PUEDES USAR HTML NORMAL AQUÍ DENTRO DE LAS COMILLAS INVERTIDAS
+      // Puedes usar class="...", <br>, <b>, etc. sin problemas.
+      content: `
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+          <p class="text-lg">
             La idea del átomo comenzó en Grecia con Demócrito ("a-tomos", sin división), pero la ciencia moderna retomó el concepto siglos después.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <h4 className="font-bold text-blue-800 mb-2">J. Dalton (1803)</h4>
-              <p className="text-sm">Imaginó el átomo como una esfera sólida e indivisible, como una bola de billar. Postuló que átomos del mismo elemento son idénticos en masa.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+              <h4 class="font-bold text-blue-800 mb-2">J. Dalton (1803)</h4>
+              <p class="text-sm">Imaginó el átomo como una esfera sólida e indivisible, como una bola de billar. Postuló que átomos del mismo elemento son idénticos en masa.</p>
             </div>
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <h4 className="font-bold text-blue-800 mb-2">J.J. Thomson (1904)</h4>
-              <p className="text-sm">Descubrió el electrón. Propuso el modelo del "Budín de Pasas": una esfera positiva con electrones negativos incrustados.</p>
+            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+              <h4 class="font-bold text-blue-800 mb-2">J.J. Thomson (1904)</h4>
+              <p class="text-sm">Descubrió el electrón. Propuso el modelo del "Budín de Pasas": una esfera positiva con electrones negativos incrustados.</p>
             </div>
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <h4 className="font-bold text-blue-800 mb-2">E. Rutherford (1911)</h4>
-              <p className="text-sm">Experimento de la lámina de oro. Descubrió que el átomo es mayormente vacío y tiene un núcleo denso y positivo. Modelo planetario.</p>
+            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+              <h4 class="font-bold text-blue-800 mb-2">E. Rutherford (1911)</h4>
+              <p class="text-sm">Experimento de la lámina de oro. Descubrió que el átomo es mayormente vacío y tiene un núcleo denso y positivo. Modelo planetario.</p>
             </div>
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <h4 className="font-bold text-blue-800 mb-2">Niels Bohr (1913)</h4>
-              <p className="text-sm">Propuso que los electrones giran en órbitas circulares de energía definida. Introdujo la cuantización de la energía.</p>
+            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+              <h4 class="font-bold text-blue-800 mb-2">Niels Bohr (1913)</h4>
+              <p class="text-sm">Propuso que los electrones giran en órbitas circulares de energía definida. Introdujo la cuantización de la energía.</p>
             </div>
           </div>
         </div>
-      ),
+      `,
       quiz: {
         question: "¿Qué científico descubrió que el átomo tiene un núcleo denso y carga positiva?",
         options: ["J.J. Thomson", "John Dalton", "Ernest Rutherford", "Niels Bohr"],
@@ -69,14 +71,14 @@ const trimesterData = {
       id: 2,
       title: "2. El Modelo Mecano-Cuántico",
       duration: "60 min",
-      content: (
-        <div className="space-y-6 text-gray-700 leading-relaxed">
+      content: `
+        <div class="space-y-6 text-gray-700 leading-relaxed">
           <p>
             El modelo actual no ve al electrón como una partícula girando, sino como una onda de probabilidad. Heisenberg introdujo el <strong>Principio de Incertidumbre</strong>: no podemos saber la posición y velocidad del electrón al mismo tiempo.
           </p>
-          <div className="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500">
-            <h4 className="font-bold text-indigo-900 mb-2">Los Números Cuánticos</h4>
-            <ul className="list-disc pl-5 space-y-2">
+          <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500">
+            <h4 class="font-bold text-indigo-900 mb-2">Los Números Cuánticos</h4>
+            <ul class="list-disc pl-5 space-y-2">
               <li><strong>n (Principal):</strong> Nivel de energía (1, 2, 3...). Tamaño del orbital.</li>
               <li><strong>l (Secundario):</strong> Forma del orbital (s=0, p=1, d=2, f=3).</li>
               <li><strong>ml (Magnético):</strong> Orientación espacial del orbital.</li>
@@ -84,7 +86,7 @@ const trimesterData = {
             </ul>
           </div>
         </div>
-      ),
+      `,
       quiz: {
         question: "¿Qué número cuántico indica la forma geométrica del orbital (s, p, d, f)?",
         options: ["Principal (n)", "Secundario (l)", "Magnético (ml)", "Spin (ms)"],
@@ -95,23 +97,23 @@ const trimesterData = {
       id: 3,
       title: "3. Configuración Electrónica",
       duration: "50 min",
-      content: (
-        <div className="space-y-6 text-gray-700 leading-relaxed">
+      content: `
+        <div class="space-y-6 text-gray-700 leading-relaxed">
           <p>
             Es la distribución de electrones en los orbitales. Seguimos el <strong>Diagrama de Moeller</strong> (Regla de las diagonales) y el Principio de exclusión de Pauli.
           </p>
-          <div className="bg-gray-800 text-white p-6 rounded-xl font-mono text-sm overflow-x-auto">
-            <p className="mb-2 text-gray-400">// Ejemplo: Carbono (Z=6)</p>
+          <div class="bg-gray-800 text-white p-6 rounded-xl font-mono text-sm overflow-x-auto">
+            <p class="mb-2 text-gray-400">// Ejemplo: Carbono (Z=6)</p>
             <p>1s² 2s² 2p²</p>
             <br/>
-            <p className="mb-2 text-gray-400">// Ejemplo: Cloro (Z=17)</p>
+            <p class="mb-2 text-gray-400">// Ejemplo: Cloro (Z=17)</p>
             <p>1s² 2s² 2p⁶ 3s² 3p⁵</p>
           </div>
-          <p className="text-sm italic">
+          <p class="text-sm italic">
             Nota: Los exponentes suman el número total de electrones (Z en átomos neutros).
           </p>
         </div>
-      ),
+      `,
       quiz: {
         question: "¿Cuál es la configuración electrónica correcta del Sodio (Na, Z=11)?",
         options: ["1s² 2s² 2p⁶ 3s²", "1s² 2s² 2p⁶ 3s¹", "1s² 2s² 2p⁵ 3s²", "1s² 2s² 2p⁶"],
@@ -122,25 +124,25 @@ const trimesterData = {
       id: 4,
       title: "4. Tabla Periódica y Propiedades",
       duration: "40 min",
-      content: (
-        <div className="space-y-6 text-gray-700 leading-relaxed">
+      content: `
+        <div class="space-y-6 text-gray-700 leading-relaxed">
           <p>
             La tabla se organiza por Número Atómico (Z) creciente.
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <li className="bg-white p-4 shadow-sm rounded-lg border">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <li class="bg-white p-4 shadow-sm rounded-lg border">
               <strong>Grupos (Columnas):</strong> Elementos con la misma configuración electrónica externa (valencia).
             </li>
-            <li className="bg-white p-4 shadow-sm rounded-lg border">
+            <li class="bg-white p-4 shadow-sm rounded-lg border">
               <strong>Periodos (Filas):</strong> Indican el último nivel de energía (n).
             </li>
           </ul>
-          <h4 className="font-bold text-gray-900 mt-4">Propiedades Periódicas</h4>
+          <h4 class="font-bold text-gray-900 mt-4">Propiedades Periódicas</h4>
           <p>
             <strong>Electronegatividad:</strong> Capacidad de atraer electrones. Aumenta hacia arriba y a la derecha. El Flúor (F) es el rey.
           </p>
         </div>
-      ),
+      `,
       quiz: {
         question: "En la tabla periódica, ¿cómo varía el radio atómico?",
         options: [
@@ -351,9 +353,13 @@ const LessonView = ({ lesson, onBack, onComplete, isCompleted }) => (
     <div className="p-8 md:p-10">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{lesson.title}</h1>
       
-      <div className="prose prose-blue max-w-none mb-10">
-        {lesson.content}
-      </div>
+      {/* AQUÍ ES DONDE SE INSERTA EL HTML 
+         Usamos dangerouslySetInnerHTML para renderizar el string HTML
+      */}
+      <div 
+        className="prose prose-blue max-w-none mb-10"
+        dangerouslySetInnerHTML={{ __html: lesson.content }}
+      />
 
       {!isCompleted ? (
         <Quiz data={lesson.quiz} onComplete={() => { onComplete(lesson.id); }} />
@@ -392,7 +398,7 @@ const EndScreen = ({ onRestart }) => (
 
 // --- APP PRINCIPAL ---
 
-export default function FirstTrimesterApp() {
+export default function App() {
   const [view, setView] = useState('cover'); // cover, intro, index, lesson, end
   const [completedLessons, setCompletedLessons] = useState([]);
   const [activeLesson, setActiveLesson] = useState(null);
@@ -466,5 +472,4 @@ export default function FirstTrimesterApp() {
       </div>
     </div>
   );
-
 }
